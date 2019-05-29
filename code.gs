@@ -1,11 +1,3 @@
-function doGet() {
- var template = HtmlService.createTemplateFromFile('index');
-  template.aliases = getGmailAliasesList();
-  var html = template.evaluate().setTitle('MailMan');
-  return html;
-};
-
-
 function onOpen() {
   SpreadsheetApp.getUi()
   .createMenu('➡ MailMan')
