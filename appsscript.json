@@ -1,21 +1,16 @@
 {
-  "oauthScopes": [
-    "https://www.googleapis.com/auth/gmail.addons.execute",
-    "https://www.googleapis.com/auth/gmail.addons.current.message.metadata",
-    "https://www.googleapis.com/auth/gmail.modify"
-  ],
-  "gmail": {
-    "name": "Gmail Add-on Quickstart - QuickLabels",
-    "logoUrl": "https://www.gstatic.com/images/icons/material/system/1x/label_googblue_24dp.png",
-    "contextualTriggers": [{
-      "unconditional": {
-      },
-      "onTriggerFunction": "buildAddOn"
-    }],
-    "openLinkUrlPrefixes": [
-      "https://mail.google.com/"
-    ],
-    "primaryColor": "#4285F4",
-    "secondaryColor": "#4285F4"
-  }
+  "timeZone": "America/New_York",
+  "dependencies": {
+    "enabledAdvancedServices": [{
+      "userSymbol": "Gmail",
+      "serviceId": "gmail",
+      "version": "v1"
+    }]
+  },
+  "webapp": {
+    "access": "DOMAIN",
+    "executeAs": "USER_ACCESSING"
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": ["https://www.googleapis.com/auth/gmail.send", "https://www.googleapis.com/auth/gmail.settings.basic", "https://www.googleapis.com/auth/script.send_mail", "https://www.googleapis.com/auth/script.webapp.deploy", "https://www.googleapis.com/auth/script.container.ui"]
 }
